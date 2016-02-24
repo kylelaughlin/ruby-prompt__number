@@ -43,3 +43,21 @@ The times operation is different than the '*' operator becuase the times operati
 a block of code to run x times.  An example would be if we wrote 3.times {print "Hello"} returns "HelloHelloHello".  The '*' 
 operator signifies multiplication. We can get the same result of the exammple above by writing "Hello" * 3. The difference comes 
 when we replace the 'print "Hello"' in the 'times' example above with something more complex.
+
+# Do operators behave differently if you use them with integers as opposed to with floats? What if it is an integer and a float?
+
+If you use any of the opeartors discussed in this section with two integers the result will be an integer. This makes sense with 
+most of the operators but with division it doesn't seem to add up (operator pun!). If we took 10 / 3 on a calculator it doesn't 
+come out to a whole number. In ruby the result will be 3.  When using two integers, division will result in how many whole times 
+the second integer fits into the first. In the case of 10 / 3, 3 only goes into 10, three times. 
+
+If we use two floats the result of any operator will be a float. Even if these two floats represent what could be an integer, such 
+as 12.0 or 5.0), the result would be a float. 
+
+When using an integer and a float when performing an operation the result will be a float. It does not matter if the integer or 
+float comes first. The integer is casted to a float (as you put it, promoted to a float) in order for the operation to take place 
+with like number types. 
+
+With any operator if two integers are used, the result will be an integer. If an integer or a float is used, the result will be a 
+float. This is so irregardless of the order (integer * float or float * integer). If two floats are used, the result will always 
+be a float.
